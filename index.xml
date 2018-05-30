@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cocoa Enhanced</title>
+    <link>https://zvlex.github.io/</link>
+    <description>Recent content on Cocoa Enhanced</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 30 May 2018 19:37:14 +0400</lastBuildDate>
+    
+	<atom:link href="https://zvlex.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://zvlex.github.io/blog/my-first-post/</link>
+      <pubDate>Wed, 30 May 2018 19:37:14 +0400</pubDate>
+      
+      <guid>https://zvlex.github.io/blog/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
