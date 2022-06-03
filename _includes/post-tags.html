@@ -1,0 +1,15 @@
+{% if document.tags %}
+  {% assign tags_sorted = document.tags | sort_natural %}
+
+      <span class="page__meta-date">
+        <i class="fas fa-hashtag" aria-hidden="true"></i>
+	{% for tag_word in tags_sorted %}
+	<a href="{{ tag_word | slugify | prepend: 'tags/#' | relative_url }}" style="text-decoration:none" class="" rel="tag">
+		{{ tag_word }}
+	</a>
+	{% unless forloop.last %}
+	<span class="sep" style="padding: 0.1em"></span>
+	{% endunless %}
+	{% endfor %}
+      </span>
+{% endif %}
