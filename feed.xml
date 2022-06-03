@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://zvlex.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://zvlex.dev/" rel="alternate" type="text/html" /><updated>2022-06-03T21:09:39+00:00</updated><id>https://zvlex.dev/feed.xml</id><title type="html">zvlex.dev</title><subtitle>Yet another Software Developer blog</subtitle><author><name>Aleksandre Zutikov</name></author><entry><title type="html">Welcome to Jekyll!</title><link href="https://zvlex.dev/jekyll/update/2022/06/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-06-02T18:44:47+00:00</published><updated>2022-06-02T18:44:47+00:00</updated><id>https://zvlex.dev/jekyll/update/2022/06/02/welcome-to-jekyll</id><content type="html" xml:base="https://zvlex.dev/jekyll/update/2022/06/02/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Aleksandre Zutikov</name></author><category term="jekyll" /><category term="update" /><category term="Ruby" /><category term="Rails" /><category term="Elixir" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Ruby Basics</title><link href="https://zvlex.dev/2022/04/29/ruby-basics.html" rel="alternate" type="text/html" title="Ruby Basics" /><published>2022-04-29T00:00:00+00:00</published><updated>2022-04-29T00:00:00+00:00</updated><id>https://zvlex.dev/2022/04/29/ruby-basics</id><content type="html" xml:base="https://zvlex.dev/2022/04/29/ruby-basics.html"><![CDATA[<p>In this article, we will get acquainted with the basic types of Ruby, consider the syntax and learn how to use them.</p>
+
+<p>All code will be entered in the interactive console - <code class="language-plaintext highlighter-rouge">irb</code></p>
+
+<h3 id="rubynew">Ruby.new</h3>
+
+<p>Create new file <strong>terminal.rb</strong> with this code:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">Terminal</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:title</span>
+  
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s1">'Awesome Term'</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+  
+  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">command</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Welcome to </span><span class="si">#{</span><span class="n">title</span><span class="si">}</span><span class="s2">!"</span>
+    
+    <span class="nb">puts</span> <span class="s2">"Running your '</span><span class="si">#{</span><span class="n">command</span><span class="si">}</span><span class="s2">' command..."</span> <span class="k">if</span> <span class="n">command</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>.rb</strong> - is Ruby file extension</p>
+
+<p>Now open the terminal and run <code class="language-plaintext highlighter-rouge">irb</code> command, you will see Ruby interactive command prompt.</p>
+
+<p>If you write <code class="language-plaintext highlighter-rouge">1 + 1</code> and press enter, Ruby will immediately execute your code and return the result:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">001</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="o">=&gt;</span> <span class="mi">2</span></code></pre></figure>
+
+<p>Execute code from a file:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">require_relative</span> <span class="s1">'terminal'</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t1</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t1</span><span class="p">.</span><span class="nf">run</span> 
+<span class="o">=&gt;</span> <span class="no">Welcome</span> <span class="n">to</span> <span class="no">Awesome</span> <span class="no">Term</span><span class="o">!</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t2</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'Terminator'</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t2</span><span class="p">.</span><span class="nf">run</span>
+<span class="o">=&gt;</span> <span class="no">Welcome</span> <span class="n">to</span> <span class="no">Terminator</span><span class="o">!</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t3</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t3</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s2">"Just Term"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t3</span><span class="p">.</span><span class="nf">run</span>
+<span class="o">=&gt;</span> <span class="no">Welcome</span> <span class="n">to</span> <span class="no">Just</span> <span class="no">Term</span><span class="o">!</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t4</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t4</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s2">"Just Term"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t4</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="s2">"ls"</span><span class="p">)</span>
+<span class="o">=&gt;</span> <span class="no">Welcome</span> <span class="n">to</span> <span class="no">Just</span> <span class="no">Term</span><span class="o">!</span>
+<span class="o">=&gt;</span> <span class="no">Running</span> <span class="n">your</span> <span class="s1">'ls'</span> <span class="n">command</span><span class="o">...</span>
+</code></pre></div></div>
+
+<p><strong>require_relative</strong> - Ruby method loads the file or library named <em>string</em> relative to the requiring file’s path.</p>
+
+<p>Class is a unique object in Ruby, we can declare it with a special keyword - <strong>class</strong></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initialize</span> <span class="p">(</span><span class="n">title</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>Is a special method in Ruby that allows us to specify the initial values of an object that we can transfer to
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'My Term'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>But the title argument is not stored anywhere yet.</p>
+
+<p>You must assign a <code class="language-plaintext highlighter-rouge">@</code> variable for storage. (Instance Variables)</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Terminal</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>In the <a href="../install-ruby-with-asdf-on-fedora-linux">first part</a> we installed Ruby in our system.</p>
+</blockquote>
+
+<h3 id="getters-and-setters">Getters and Setters</h3>
+
+<p>Run <code class="language-plaintext highlighter-rouge">irb</code> and enter this code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Terminal</span>
+ <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+   <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+ <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"My Term"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In the console we will see what we got back:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">=&gt;</span> <span class="c1">#&lt;Terminal:0x00000000017be6b0 @title="My Term"&gt;</span>
+</code></pre></div></div>
+
+<p>Call our Terminal object and get the title:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'My Term'</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span>
+</code></pre></div></div>
+
+<p><strong>puts</strong> - a method that returns values in the terminal for each new line.</p>
+
+<p>Oops - we get an error…</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">undefined</span> <span class="nb">method</span> <span class="sb">`title' for #&lt;Terminal:0x0000000001667b40 @title="My Term"&gt; (NoMethodError)
+</span></code></pre></div></div>
+
+<p><em>Reason</em> - The object has no method title.</p>
+
+<p>Create this method and return the title:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Terminal</span>
+ <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+   <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+ <span class="k">end</span>
+  
+ <span class="k">def</span> <span class="nf">title</span>
+   <span class="vi">@title</span>
+ <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Once initialized we can use the title object as <code class="language-plaintext highlighter-rouge">@title</code>.</p>
+
+<p>Let’s call again:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'My Term'</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span>
+<span class="o">=&gt;</span> <span class="no">My</span> <span class="no">Term</span>
+</code></pre></div></div>
+
+<p>We can dynamically change the name:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'My Term'</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s1">'Some Term'</span> 
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span>
+<span class="o">=&gt;</span> <span class="no">Some</span> <span class="no">Term</span>
+</code></pre></div></div>
+
+<p>For this we need to add a new method</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">title</span> <span class="o">=</span> <span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>New code looks like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Terminal</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+  
+  <span class="k">def</span> <span class="nf">title</span>
+    <span class="vi">@title</span>
+  <span class="k">end</span>
+  
+  <span class="k">def</span> <span class="nf">title</span><span class="o">=</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">val</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'My Term'</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s1">'Some Term'</span> 
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span>
+<span class="o">=&gt;</span> <span class="no">Some</span> <span class="no">Term</span>
+</code></pre></div></div>
+
+<h3 id="attr_reader"><strong>attr_reader</strong></h3>
+
+<p>To avoid always writing methods for initial values, Ruby has the method <code class="language-plaintext highlighter-rouge">attr_reader</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Terminal</span>
+  <span class="nb">attr_reader</span> <span class="ss">:title</span>
+  
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'My Term'</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span>
+<span class="o">=&gt;</span> <span class="no">My</span> <span class="no">Term</span>
+</code></pre></div></div>
+
+<h3 id="attr_writer"><strong>attr_writer</strong></h3>
+
+<p>Instead of writing <code class="language-plaintext highlighter-rouge">def title = (val)</code> every time, Ruby has <code class="language-plaintext highlighter-rouge">attr_writer</code> method:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Terminal</span>
+  <span class="nb">attr_reader</span> <span class="ss">:title</span>
+  <span class="nb">attr_writer</span> <span class="ss">:title</span>
+  
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Terminal</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s1">'My New Term'</span> 
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span>
+<span class="o">=&gt;</span> <span class="no">My</span> <span class="no">New</span> <span class="no">Term</span>
+</code></pre></div></div>
+
+<p>We can replace <code class="language-plaintext highlighter-rouge">attr_reader</code> and <code class="language-plaintext highlighter-rouge">attr_writer</code> with <code class="language-plaintext highlighter-rouge">attr_accessor</code>, which will add both actions. If they used, we no longer write the <code class="language-plaintext highlighter-rouge">@</code> symbol inside the object.</p>
+
+<p>All methods that are in the object are called <code class="language-plaintext highlighter-rouge">Instance Methods</code></p>
+
+<h3 id="method-default-value"><strong>method default value</strong></h3>
+
+<p>In the method we can define a default value:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s1">'Awesome Term'</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>If we didn’t pass any value to the <code class="language-plaintext highlighter-rouge">Terminal.new</code>, the title would be set to “Awesome Term”.</p>
+
+<h2 id="interpolation">Interpolation</h2>
+
+<p>Consider the method run (command = nil):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">command</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Welcome to </span><span class="si">#{</span><span class="n">title</span><span class="si">}</span><span class="s2">!"</span>
+    
+  <span class="nb">puts</span> <span class="s2">"Running your '</span><span class="si">#{</span><span class="n">command</span><span class="si">}</span><span class="s2">' command..."</span> <span class="k">if</span> <span class="n">command</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Here we see an example of interpolation - <code class="language-plaintext highlighter-rouge">"# {any Ruby code here}”</code></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">command</code> variable has a default value of nil, when something is passed in the method the code is called:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s2">"Running your '</span><span class="si">#{</span><span class="n">command</span><span class="si">}</span><span class="s2">' command...
+</span></code></pre></div></div>
+
+<h2 id="variables">Variables</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Local</span> <span class="o">-</span> <span class="nb">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">lang</span>
+<span class="no">Instance</span> <span class="o">-</span> <span class="vi">@name</span><span class="p">,</span> <span class="vi">@age</span><span class="p">,</span> <span class="vi">@lang</span>
+<span class="no">Class</span> <span class="o">-</span> <span class="vc">@@name</span><span class="p">,</span> <span class="vc">@@age</span><span class="p">,</span> <span class="vc">@@lang</span>
+<span class="no">Global</span> <span class="o">-</span> <span class="vg">$NAME</span><span class="p">,</span> <span class="vg">$AGE</span><span class="p">,</span> <span class="vg">$LANG</span>
+</code></pre></div></div>
+
+<p>Variables can be of any type - string, array, tree, etc.</p>
+
+<h2 id="strings"><strong>Strings</strong></h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">name</span> <span class="o">=</span> <span class="s2">"Alex"</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="s1">'Alex'</span>
+</code></pre></div></div>
+
+<p>With double quotes <code class="language-plaintext highlighter-rouge">""</code> - we can use interpolation, as well as special characters <code class="language-plaintext highlighter-rouge">\n</code> <code class="language-plaintext highlighter-rouge">\t</code> <code class="language-plaintext highlighter-rouge">\r</code></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s2">"Hello,</span><span class="se">\n</span><span class="s2">World"</span>
+
+<span class="nb">puts</span> <span class="n">hello</span>
+<span class="o">=&gt;</span> <span class="no">Hello</span><span class="p">,</span>
+<span class="o">=&gt;</span> <span class="no">World</span>
+
+<span class="n">hello</span> <span class="o">=</span> <span class="s1">'Hello,\nWorld'</span>
+<span class="nb">puts</span> <span class="n">hello</span>
+
+<span class="o">=&gt;</span> <span class="no">Hello</span><span class="p">,\</span><span class="n">nWorld</span>
+</code></pre></div></div>
+
+<p>In single quotes, special characters don’t work, nor does interpolation. If there is a way, it is better to use single quotes <code class="language-plaintext highlighter-rouge">''</code></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">lang</span> <span class="o">=</span> <span class="s1">'ruby'</span>
+
+<span class="c1"># Returns a new copy of the object</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">lang</span><span class="p">.</span><span class="nf">upcase</span>
+<span class="o">=&gt;</span> <span class="no">RUBY</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">lang</span><span class="p">.</span><span class="nf">capitalize</span>
+<span class="o">=&gt;</span> <span class="no">Ruby</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">lang</span>
+<span class="o">=&gt;</span> <span class="n">ruby</span>
+
+<span class="c1"># If we want to directly change the lang object, we have to call it bang!</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">lang</span><span class="p">.</span><span class="nf">upcase!</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">lang</span>
+<span class="o">=&gt;</span> <span class="no">Ruby</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="s2">"Hello! "</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="o">=&gt;</span> <span class="no">Hello</span><span class="o">!</span> <span class="no">Hello</span><span class="o">!</span> <span class="no">Hello</span><span class="o">!</span>
+</code></pre></div></div>
+
+<h3 id="concatenation">Concatenation</h3>
+
+<p>Concentration can be done by the <code class="language-plaintext highlighter-rouge">+</code> method.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">lang</span> <span class="o">=</span> <span class="s1">'ruby'</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">framework</span> <span class="o">=</span> <span class="s2">"Rails"</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">new_str</span> <span class="o">=</span> <span class="n">lang</span><span class="p">.</span><span class="nf">capitalize</span> <span class="o">+</span> <span class="s1">' on '</span> <span class="o">+</span> <span class="n">framework</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">new_str</span>
+<span class="o">=&gt;</span> <span class="no">Ruby</span> <span class="n">on</span> <span class="no">Rails</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">new_str</span><span class="p">.</span><span class="nf">length</span>
+<span class="o">=&gt;</span> <span class="mi">13</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">new_str</span><span class="p">.</span><span class="nf">reverse</span>
+<span class="o">=&gt;</span> <span class="s2">"sliaR no ybuR"</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">lang</span><span class="si">}</span><span class="s2"> on </span><span class="si">#{</span><span class="n">framework</span><span class="si">}</span><span class="s2">"</span>
+<span class="o">=&gt;</span> <span class="no">Ruby</span> <span class="n">on</span> <span class="no">Rails</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">'Hello'</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">str</span> <span class="o">=</span> <span class="n">str</span> <span class="o">+</span> <span class="s1">', World'</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">str</span>
+<span class="o">=&gt;</span> <span class="no">Hello</span><span class="p">,</span> <span class="no">World</span>
+
+<span class="c1"># Short version</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">'Hello'</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">str</span> <span class="o">+=</span> <span class="s1">', World'</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">str</span>
+<span class="o">=&gt;</span> <span class="no">Hello</span><span class="p">,</span> <span class="no">World</span>
+</code></pre></div></div>
+
+<h3 id="integer-and-float"><strong>Integer and Float</strong></h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="o">=&gt;</span> <span class="mi">310</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">counter</span> <span class="o">+=</span> <span class="mi">100</span>
+<span class="o">=&gt;</span> <span class="mi">400</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">ten</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">ten</span><span class="p">.</span><span class="nf">to_f</span>
+<span class="o">=&gt;</span> <span class="mf">10.0</span>
+</code></pre></div></div>
+
+<h3 id="type-conversions">Type Conversions</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">age</span> <span class="o">=</span> <span class="s2">"28"</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="o">=&gt;</span> <span class="k">in</span> <span class="s1">'+'</span><span class="p">:</span> <span class="n">no</span> <span class="n">implicit</span> <span class="n">conversion</span> <span class="n">of</span> <span class="no">Integer</span> <span class="n">into</span> <span class="no">String</span> <span class="p">(</span><span class="no">TypeError</span><span class="p">)</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">28</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">age</span> <span class="o">+</span> <span class="s2">"2"</span>
+<span class="o">=&gt;</span> <span class="k">in</span> <span class="s1">'+'</span><span class="p">:</span> <span class="no">String</span> <span class="n">can</span><span class="err">'</span><span class="n">t</span> <span class="n">be</span> <span class="n">coerced</span> <span class="n">into</span> <span class="no">Integer</span> <span class="p">(</span><span class="no">TypeError</span><span class="p">)</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">28</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">age</span> <span class="o">+</span> <span class="s2">"1"</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="o">=&gt;</span> <span class="mi">29</span>
+
+<span class="n">age</span> <span class="o">=</span> <span class="s2">"28"</span>
+<span class="nb">puts</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span><span class="p">.</span><span class="nf">to_s</span>
+
+<span class="o">=&gt;</span> <span class="mi">281</span>
+</code></pre></div></div>
+
+<h3 id="symbols"><strong>Symbols</strong></h3>
+
+<p>The symbols are identifiers, they have something in common with String.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="s2">"hello"</span><span class="p">.</span><span class="nf">to_sym</span>
+<span class="o">=&gt;</span> <span class="ss">:hello</span>
+</code></pre></div></div>
+
+<p>Once stored in memory and does not change location in memory. The string always has a new address in memory.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="ss">:hello</span><span class="p">.</span><span class="nf">object_id</span>
+<span class="o">=&gt;</span> <span class="mi">2219548</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="ss">:hello</span><span class="p">.</span><span class="nf">object_id</span>
+<span class="o">=&gt;</span> <span class="mi">2219548</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="s2">"hello"</span><span class="p">.</span><span class="nf">object_id</span>
+<span class="o">=&gt;</span> <span class="mi">280</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="s2">"hello"</span><span class="p">.</span><span class="nf">object_id</span>
+<span class="o">=&gt;</span> <span class="mi">300</span>
+</code></pre></div></div>
+
+<h3 id="boolean-falseclass-trueclass-and-nilclass"><strong>Boolean (FalseClass, TrueClass and NilClass)</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">false</code> and <code class="language-plaintext highlighter-rouge">nil</code> are always <strong>false</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">true</code> and <code class="language-plaintext highlighter-rouge">0</code>, or <em>any variable</em> or object is <strong>true</strong></li>
+</ul>
+
+<h3 id="array">Array</h3>
+<p>A collection of different elements which can be of any type.</p>
+
+<p>Array initialization:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span><span class="p">([])</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="kp">nil</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="sx">%w()</span>
+<span class="o">=&gt;</span> <span class="p">[]</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">.</span><span class="nf">class</span>
+<span class="o">=&gt;</span> <span class="no">Array</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"somestring"</span><span class="p">].</span><span class="nf">length</span>
+<span class="o">=&gt;</span> <span class="mi">3</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Ruby'</span><span class="p">,</span> <span class="s1">'on'</span><span class="p">,</span> <span class="s1">'Rails'</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+<span class="o">=&gt;</span> <span class="no">Ruby</span> <span class="n">on</span> <span class="no">Rails</span> <span class="mi">7</span>
+</code></pre></div></div>
+
+<p>Array element indexes start at <strong>0</strong></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="mi">1</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">arr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="mi">5</span>
+</code></pre></div></div>
+
+<p>If the array index is not found it returns nil</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="kp">nil</span>
+</code></pre></div></div>
+
+<p>Add to Array:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">arr</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="kp">nil</span><span class="p">,</span> <span class="kp">nil</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> 
+
+<span class="c1"># Add to the beginning of the array</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">.</span><span class="nf">unshift</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Remove from the array:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Returns the last element and removes it from the array</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">.</span><span class="nf">pop</span>
+<span class="o">=&gt;</span> <span class="mi">5</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">arr</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># Returns the first element and removes it from the array</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">.</span><span class="nf">shift</span>
+
+<span class="o">=&gt;</span> <span class="mi">1</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">arr</span>
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="hash">Hash</h3>
+<p>A hash is a structure that is also called an associative array, but we can use any type of object in indexes.</p>
+
+<p>The tree index name is unique.</p>
+
+<p>Create a tree</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="c1"># Hash default value</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span><span class="p">[</span><span class="ss">:some_key</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="mi">9</span>
+</code></pre></div></div>
+
+<p>Return elements:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="ss">name: </span><span class="s1">'Alex'</span><span class="p">,</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="ss">age: </span><span class="mi">28</span><span class="p">,</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="ss">langs: </span><span class="sx">%w(Ruby Elixir Dart)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">}</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">h</span><span class="p">[</span><span class="ss">:name</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="no">Alex</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">h</span><span class="p">[</span><span class="ss">:age</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="mi">28</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">h</span><span class="p">[</span><span class="ss">:langs</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'Ruby'</span><span class="p">,</span> <span class="s1">'Elixir'</span><span class="p">,</span> <span class="s1">'Dart'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Add new elements:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span><span class="p">[</span><span class="ss">:name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Alex'</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span><span class="p">[</span><span class="s1">'age'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">28</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">h</span>
+<span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s1">'Alex'</span><span class="p">,</span> <span class="s2">"age"</span> <span class="o">=&gt;</span> <span class="mi">28</span> <span class="p">}</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">h</span><span class="p">[</span><span class="ss">:name</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="no">Alex</span>
+
+<span class="c1"># Returns nil because the key is stored as a string and we point to it as a symbol</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">h</span><span class="p">[</span><span class="ss">:age</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="kp">nil</span>
+
+<span class="c1"># key can be any object</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="s2">"one"</span><span class="p">,</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="s2">"two"</span> <span class="p">}</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">h</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="n">one</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="kp">nil</span>
+</code></pre></div></div>
+
+<h3 id="constants">Constants</h3>
+<p>Always starts with uppercase letters, the stored data does not change. (Changes but shows Ruby Warning)</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="no">RUBY_VERSION</span> <span class="o">=</span> <span class="mf">3.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="no">SomeString</span> <span class="o">=</span> <span class="s2">"hello"</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="no">SomeString</span> <span class="o">=</span> <span class="s2">"changes"</span>
+
+<span class="o">=&gt;</span> <span class="ss">warning: </span><span class="n">already</span> <span class="n">initialized</span> <span class="n">constant</span> <span class="no">SomeString</span>
+</code></pre></div></div>
+
+<h3 id="range">Range</h3>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">).</span><span class="nf">to_a</span>
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="c1"># include 5</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+<span class="o">=&gt;</span> <span class="kp">true</span>
+</code></pre></div></div>
+
+<h3 id="control-structures">Control Structures</h3>
+<p><strong>if</strong> - is waiting for any object that will be true</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">check_version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="k">if</span> <span class="n">version</span> <span class="o">&gt;</span> <span class="mf">2.6</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">"Ok"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="k">elsif</span> <span class="n">version</span> <span class="o">&gt;=</span> <span class="mf">2.3</span> <span class="o">||</span> <span class="n">version</span> <span class="o">&lt;=</span> <span class="mf">2.5</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">"Legacy"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="k">else</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">"Very old"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="k">end</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="k">end</span>
+  
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">check_version</span><span class="p">(</span><span class="mf">2.8</span><span class="p">)</span>
+<span class="o">=&gt;</span> <span class="no">Ok</span>
+</code></pre></div></div>
+
+<p><strong>unless</strong> - ends when it is false. (reverse version of if)</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">is_eq</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># false</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="k">unless</span> <span class="n">is_eq</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="nb">puts</span> <span class="s2">"enter unless block"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="n">enter</span> <span class="k">unless</span> <span class="n">block</span>
+</code></pre></div></div>
+
+<p><strong>case</strong> - is a switch analog in other languages, but once entered in when it no longer goes to the next element.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">28</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="k">case</span> <span class="n">age</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="k">when</span> <span class="mi">1</span><span class="o">..</span><span class="mi">18</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">"&lt;=18"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="k">when</span> <span class="mi">19</span><span class="o">...</span><span class="mi">31</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="nb">puts</span> <span class="s2">"&gt;18"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="k">else</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span>   <span class="nb">puts</span> <span class="n">age</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="o">&gt;</span><span class="mi">18</span>
+</code></pre></div></div>]]></content><author><name>Aleksandre Zutikov</name></author><category term="Ruby" /><summary type="html"><![CDATA[In this article, we will get acquainted with the basic types of Ruby, consider the syntax and learn how to use them.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://zvlex.dev/assets/images/ruby-new.png" /><media:content medium="image" url="https://zvlex.dev/assets/images/ruby-new.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Installing Ruby with asdf on Fedora Linux</title><link href="https://zvlex.dev/2022/04/20/install-ruby-with-asdf-on-fedora-linux.html" rel="alternate" type="text/html" title="Installing Ruby with asdf on Fedora Linux" /><published>2022-04-20T00:00:00+00:00</published><updated>2022-04-20T00:00:00+00:00</updated><id>https://zvlex.dev/2022/04/20/install-ruby-with-asdf-on-fedora-linux</id><content type="html" xml:base="https://zvlex.dev/2022/04/20/install-ruby-with-asdf-on-fedora-linux.html"><![CDATA[<blockquote>
+  <p>I’m using <a href="https://getfedora.org/en/">Fedora Linux</a> distribution for all examples here, if you are using another system, there may be differences in packages to install.</p>
+</blockquote>
+
+<p>Let’s begin.</p>
+
+<p>Open your terminal and run these commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nt">-y</span> groupinstall <span class="s2">"Development Tools"</span>
+<span class="nb">sudo </span>dnf <span class="nb">install </span>vim git curl wget zsh util-linux-user 
+</code></pre></div></div>
+
+<p>I prefer <strong>zsh</strong> with <strong>ohmyzsh</strong>, so install them too:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>zsh util-linux-user 
+</code></pre></div></div>
+
+<p>Run and make <strong>zsh</strong> your default sh:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>If you change a <strong>**command language interpreter (sh) from **bash</strong> to <strong>zsh</strong>, you need to restart your system. Otherwise you can temporally run <code class="language-plaintext highlighter-rouge">zsh</code> command in terminal and continue.</p>
+
+<h2 id="install-ruby-with-asdf">Install Ruby with asdf</h2>
+
+<p><strong><a href="https://asdf-vm.com/">asdf</a></strong> - multiple runtime versions manager which supports a lot of programming languages that you can install it in our system, just adding a plugin. It is very simple, flexible and I use it too.</p>
+
+<p>At first we need to install system dependencies for Fedora Linux</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install</span> <span class="nt">-y</span> gcc make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel
+</code></pre></div></div>
+
+<p>Clone <strong>asdf</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/asdf-vm/asdf.git ~/.asdf <span class="nt">--branch</span> v0.9.0
+</code></pre></div></div>
+
+<p>Open <code class="language-plaintext highlighter-rouge">~/.zshrc</code> file and add this line to the bottom</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span> <span class="nv">$HOME</span>/.asdf/asdf.sh
+</code></pre></div></div>
+
+<p>Close and open your terminal again. Run <code class="language-plaintext highlighter-rouge">zsh</code> if you don’t restart your system yet.</p>
+
+<p>Add plugin to <strong>asdf</strong>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>asdf plugin-add ruby
+</code></pre></div></div>
+
+<p>Begin Ruby installation:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>asdf <span class="nb">install </span>ruby latest
+</code></pre></div></div>
+
+<p>It will end in several minutes (depending on your machine resources).</p>
+
+<p>Then set global Ruby version in you system:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>asdf global ruby latest
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+<span class="o">=&gt;</span> ruby 3.1.1p18 <span class="o">(</span>2022-02-18 revision 53f5fc4236<span class="o">)</span> <span class="o">[</span>x86_64-linux]
+</code></pre></div></div>
+
+<p>You can view a list of any installed programming languages in your system with the command</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>asdf list                                                                                                                                    ✔ 
+<span class="o">=&gt;</span> 
+elixir
+  1.13.3-otp-24
+erlang
+  24.3.3
+ruby
+  3.1.1
+</code></pre></div></div>]]></content><author><name>Aleksandre Zutikov</name></author><category term="Ruby" /><category term="Fedora" /><summary type="html"><![CDATA[I’m using Fedora Linux distribution for all examples here, if you are using another system, there may be differences in packages to install.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://zvlex.dev/assets/images/ruby-fedora.png" /><media:content medium="image" url="https://zvlex.dev/assets/images/ruby-fedora.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ruby for Junior Developers</title><link href="https://zvlex.dev/2022/04/19/ruby-for-junior-developers.html" rel="alternate" type="text/html" title="Ruby for Junior Developers" /><published>2022-04-19T00:00:00+00:00</published><updated>2022-04-19T00:00:00+00:00</updated><id>https://zvlex.dev/2022/04/19/ruby-for-junior-developers</id><content type="html" xml:base="https://zvlex.dev/2022/04/19/ruby-for-junior-developers.html"><![CDATA[<p><strong>Ruby for Junior Developers</strong> - is a short introduction course based on my knowledge and experience for people, who wants to learn <a href="https://www.ruby-lang.org/en/">Ruby</a> programming language from scratch.</p>
+
+<p>To begin only a basic knowledge of Unix/Linux is required.</p>
+
+<blockquote>
+  <p>In this course, I use Fedora Linux Workstation. You can download it from <a href="https://getfedora.org/">here</a>.</p>
+</blockquote>
+
+<p>Have a nice journey!</p>
+
+<hr />
+
+<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="../install-ruby-with-asdf-on-fedora-linux">Installing Ruby with asdf on Fedora Linux</a></li>
+  <li><a href="../ruby-basics">Ruby basics</a></li>
+</ol>
+
+<hr />
+<p><strong>Ruby</strong> - a dynamic, general-purpose programming language with elegant syntax, mostly used to build complex web applications.</p>
+
+<p>Was born in Japan in 1995 and quickly gained popularity there, but due to the lack of translation of documentation into English, only a couple of years later he got out of the country.</p>
+
+<p>Its creator, <a href="https://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Yukihiro Matsumoto</a>, or as he calls himself <a href="https://www.ruby-lang.org/en/about/">Matz</a>, originally created a language aimed primarily at people, not machines. In his opinion, the developer, instead of struggling with the design of the language, once again trying to get around the limitations, should enjoy the development and be productive.</p>
+
+<blockquote>
+  <p>In 2016, Ruby ranked first in <a href="https://www.tiobe.com/tiobe-index/">Tiobe’s</a> programming language rankings.</p>
+</blockquote>
+
+<p>The language didn’t experience much popularity in the world until <a href="https://en.wikipedia.org/wiki/David_Heinemeier_Hansson">David Heinemeier Hansson</a> (DHH) released a web development framework called <a href="https://rubyonrails.org/">Ruby on Rails</a> in 2005.</p>
+
+<p>At that time, the super innovative framework gave a new impetus to the development of Ruby, and some technical decisions also influenced other web frameworks.</p>
+
+<p>As a result, a successful framework determined the future of the Ruby language and the niche it occupied.</p>
+
+<blockquote>
+  <p>This is not the only place where the language is used, it is also used in other areas, for example, in the field of security auditing, the <a href="https://www.metasploit.com/">Metasploit framework</a>, the <a href="https://github.com/yast?language=ruby">YaST</a> operating system configuration utility is written in Ruby, in the field of IoT (<a href="https://mruby.org/">mruby</a>), <a href="https://dragonruby.org/">DragonRuby Game Toolkit</a>, and many others. But mostly the language is used in web development.</p>
+</blockquote>
+
+<p>Ruby is actively developed, new versions are released every year, and the third version of the language was recently released.</p>
+
+<p>Now in <strong>2022</strong>, it is <strong>still relevant</strong>.</p>]]></content><author><name>Aleksandre Zutikov</name></author><category term="Ruby" /><summary type="html"><![CDATA[Ruby for Junior Developers - is a short introduction course based on my knowledge and experience for people, who wants to learn Ruby programming language from scratch.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://zvlex.dev/assets/images/ruby-bg.png" /><media:content medium="image" url="https://zvlex.dev/assets/images/ruby-bg.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

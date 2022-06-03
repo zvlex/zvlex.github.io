@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://zvlex.dev/2022/04/19/ruby-for-junior-developers.html</loc>
+<lastmod>2022-04-19T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://zvlex.dev/2022/04/20/install-ruby-with-asdf-on-fedora-linux.html</loc>
+<lastmod>2022-04-20T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://zvlex.dev/2022/04/29/ruby-basics.html</loc>
+<lastmod>2022-04-29T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://zvlex.dev/jekyll/update/2022/06/02/welcome-to-jekyll.html</loc>
+<lastmod>2022-06-02T18:44:47+00:00</lastmod>
+</url>
+<url>
+<loc>https://zvlex.dev/about/</loc>
+</url>
+<url>
+<loc>https://zvlex.dev/</loc>
+</url>
+<url>
+<loc>https://zvlex.dev/tags/</loc>
+</url>
+</urlset>
