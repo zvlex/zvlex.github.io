@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zvlex.dev</title>
+    <link>http://localhost/</link>
+    <description>Posts from zvlex.dev</description>
+    <language>en</language>
+    <ttl>60</ttl>
+    <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Learn Ruby: 5. Object-Oriented Programming</title>
+      <link>http://localhost/blog/posts/39</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/39</guid>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <author>zvlex</author>
+      <description>
+        <![CDATA[Inheritance
+      Inheritance is an OOP mechanism that lets you define a new class based on an existing (parent) class. The child class gets all the properties and methods of the parent.
+
+
+      Imagine we have a Browser class. Every browser can open and close tabs, display info about itself, and has a version, name, and platform:
+
+
+      class Browser
+  attr_accessor :name, :version, :works_on
+
+  def initialize(name = 'Browser')
+    @name = name
+    @version = 1.0
+    @works_on = %w(Linux Wi...]]>
+      </description>
+    </item>
+    <item>
+      <title>Learn Ruby: 4. Bundler, Gems, Pry, RegExp, and More</title>
+      <link>http://localhost/blog/posts/38</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/38</guid>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      <author>zvlex</author>
+      <description>
+        <![CDATA[Bundler
+      Bundler is Ruby's dependency manager — it lets you install, update, and manage gems in your project.
+
+
+
+      bundle init
+      Let's write a small program that calls the GitHub API and prints the response. We'll use the http and pry libraries.
+
+
+      Create a lecture4 folder and run:
+
+
+      bundle init
+      This generates a Gemfile:
+
+
+      # frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# gem "rails"
+      Any gem you want to use must be declared in this file....]]>
+      </description>
+    </item>
+    <item>
+      <title>Learn Ruby: 3. Blocks, Iterators, and Files</title>
+      <link>http://localhost/blog/posts/37</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/37</guid>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <author>zvlex</author>
+      <description>
+        <![CDATA[Blocks
+      A block is simply Ruby code enclosed between do and end:
+
+
+      ['Ruby', 'Elixir', 'Dart'].each do |lang|
+  puts "Learning {lang}"
+end
+
+=>
+Learning Ruby
+Learning Elixir
+Learning Dart
+
+      If it fits on one line, you can use curly braces {}:
+
+
+      ['Ruby', 'Elixir', 'Dart'].each { |lang| puts "Learning {lang}" }
+
+      yield
+      yield is a special Ruby operator that executes the code passed as a block to a method:
+
+
+      def execute_block
+  puts 'Start execution'
+  yield
+ ...]]>
+      </description>
+    </item>
+    <item>
+      <title>Learn Ruby: 2. Basics</title>
+      <link>http://localhost/blog/posts/36</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/36</guid>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <author>zvlex</author>
+      <description>
+        <![CDATA[Let's explore fundamental Ruby concepts through interactive console examples using irb.
+
+
+
+      Classes and Initialization
+      class Terminal
+  attr_accessor :title
+
+  def initialize(title = 'Awesome Term')
+    @title = title
+  end
+
+  def run(command = nil)
+    puts "Welcome to {title}!"
+    puts "Running your '{command}' command..." if command
+  end
+end
+      Key concepts: instance variables (prefixed with @), the initialize method, and require_relative for loading external files.
+
+
+
+    ...]]>
+      </description>
+    </item>
+    <item>
+      <title>Learn Ruby: 1. Installing Ruby with asdf on Fedora Linux</title>
+      <link>http://localhost/blog/posts/35</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/35</guid>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      <author>zvlex</author>
+      <description>
+        <![CDATA[Initial Setup
+      Start by installing development tools and utilities:
+
+
+      sudo dnf -y groupinstall "Development Tools"
+sudo dnf install vim git curl wget zsh util-linux-user
+
+      For those who prefer zsh with Oh My Zsh:
+
+
+      sudo dnf install zsh util-linux-user
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+      Note: If you change a command language interpreter from bash to zsh, you need to restart your system.
+
+
+
+      Installing asdf and ...]]>
+      </description>
+    </item>
+    <item>
+      <title>Learn Ruby: Intro</title>
+      <link>http://localhost/blog/posts/34</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/34</guid>
+      <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
+      <author>zvlex</author>
+      <description>
+        <![CDATA[Learn Ruby is an introductory course designed for beginners who want to learn Ruby programming from scratch, requiring only basic Unix/Linux knowledge.
+
+Course Contents
+  1. Installing Ruby with asdf on Fedora Linux
+
+  2. Ruby basics
+
+  3. Blocks, Iterators, and Files
+
+About RubyRuby is a dynamic, general-purpose programming language with elegant syntax, mostly used to build complex web applications.
+
+The language emerged in Japan in 1995, created by Yukihiro Matsumoto (known as Matz). His ph...]]>
+      </description>
+    </item>
+  </channel>
+</rss>
