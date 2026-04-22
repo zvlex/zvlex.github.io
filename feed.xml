@@ -8,9 +8,28 @@
     <ttl>60</ttl>
     <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Learn Ruby: 7. Git and GitHub Basics</title>
+      <link>http://localhost/blog/posts/68</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/68</guid>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      <author>zvlex</author>
+      <description>
+        <![CDATA[GitHub
+      GitHub is a source-control hosting service where code is stored. Register and create a new public repository named my_project. Leave the Initialize this repository with section empty.
+
+
+
+      Git
+      Git is a version control system that records changes to a file or set of files over time so you can recall specific versions later. Git was created by Linus Torvalds, who also created Linux.
+
+
+      Almost every operation is performed locally — internet access is only needed when ...]]>
+      </description>
+    </item>
+    <item>
       <title>Learn Ruby: 6. Exceptions, Errors, and Code Organization</title>
-      <link>http://localhost/blog/posts/53</link>
-      <guid isPermaLink="true">http://localhost/blog/posts/53</guid>
+      <link>http://localhost/blog/posts/69</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/69</guid>
       <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
       <author>zvlex</author>
       <description>
@@ -41,8 +60,8 @@ calc.sum("1", 2)
     </item>
     <item>
       <title>Learn Ruby: 5. Object-Oriented Programming</title>
-      <link>http://localhost/blog/posts/52</link>
-      <guid isPermaLink="true">http://localhost/blog/posts/52</guid>
+      <link>http://localhost/blog/posts/67</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/67</guid>
       <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
       <author>zvlex</author>
       <description>
@@ -64,8 +83,8 @@ calc.sum("1", 2)
     </item>
     <item>
       <title>Learn Ruby: 4. Bundler, Gems, Pry, RegExp, and More</title>
-      <link>http://localhost/blog/posts/51</link>
-      <guid isPermaLink="true">http://localhost/blog/posts/51</guid>
+      <link>http://localhost/blog/posts/66</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/66</guid>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       <author>zvlex</author>
       <description>
@@ -95,8 +114,8 @@ source "https://rubygems.org"
     </item>
     <item>
       <title>Learn Ruby: 3. Blocks, Iterators, and Files</title>
-      <link>http://localhost/blog/posts/50</link>
-      <guid isPermaLink="true">http://localhost/blog/posts/50</guid>
+      <link>http://localhost/blog/posts/65</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/65</guid>
       <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
       <author>zvlex</author>
       <description>
@@ -130,8 +149,8 @@ Learning Dart
     </item>
     <item>
       <title>Learn Ruby: 2. Basics</title>
-      <link>http://localhost/blog/posts/49</link>
-      <guid isPermaLink="true">http://localhost/blog/posts/49</guid>
+      <link>http://localhost/blog/posts/64</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/64</guid>
       <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
       <author>zvlex</author>
       <description>
@@ -161,8 +180,8 @@ end
     </item>
     <item>
       <title>Learn Ruby: 1. Installing Ruby with asdf on Fedora Linux</title>
-      <link>http://localhost/blog/posts/48</link>
-      <guid isPermaLink="true">http://localhost/blog/posts/48</guid>
+      <link>http://localhost/blog/posts/63</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/63</guid>
       <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
       <author>zvlex</author>
       <description>
@@ -188,8 +207,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
     </item>
     <item>
       <title>Learn Ruby: Intro</title>
-      <link>http://localhost/blog/posts/47</link>
-      <guid isPermaLink="true">http://localhost/blog/posts/47</guid>
+      <link>http://localhost/blog/posts/62</link>
+      <guid isPermaLink="true">http://localhost/blog/posts/62</guid>
       <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
       <author>zvlex</author>
       <description>

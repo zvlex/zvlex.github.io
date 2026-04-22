@@ -1,6 +1,6 @@
 <!DOCTYPE html><!-- BEGIN app/views/layouts/blog.html.erb
 --><html lang="en"><head>
-    <title>Devblog</title>
+    <title>Learn Ruby: 7. Git and GitHub Basics</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     
 
@@ -53,7 +53,7 @@
 </a>        <span class="bv4-nav-cursor">█</span>
         <div class="bv4-nav-links">
           <a class="bv4-nav-link " href="../../index.html">Home</a>
-          <a class="bv4-nav-link active" href="../../blog/index.html">Blog</a>
+          <a class="bv4-nav-link " href="../../blog/index.html">Blog</a>
         </div>
       </div>
     </nav>
@@ -61,49 +61,238 @@
         <div class="bv4-filter-strip">
       <div class="bv4-filter-inner">
         <span class="bv4-filter-label">topics</span>
-          <a class="bv4-filter-tag bv4-filter-tag--clear" href="../../blog/index.html">× all</a>
-          <a class="bv4-filter-tag bv4-filter-tag--active" style="border-left-color: #4a90e2; color: #4a90e2;" href="../../blog/tag/fedora.html">#fedora</a>
-          <a class="bv4-filter-tag " style="border-left-color: #4a90e2; color: #4a90e2;" href="../../blog/tag/git.html">#git</a>
-          <a class="bv4-filter-tag " style="border-left-color: #808489; color: #808489;" href="../../blog/tag/linux.html">#linux</a>
-          <a class="bv4-filter-tag " style="border-left-color: #f91a3c; color: #f91a3c;" href="../../blog/tag/ruby.html">#ruby</a>
+          <a class="bv4-filter-tag" style="border-left-color: #4a90e2; color: #4a90e2;" href="../../blog/tag/fedora.html">#fedora</a>
+          <a class="bv4-filter-tag" style="border-left-color: #4a90e2; color: #4a90e2;" href="../../blog/tag/git.html">#git</a>
+          <a class="bv4-filter-tag" style="border-left-color: #808489; color: #808489;" href="../../blog/tag/linux.html">#linux</a>
+          <a class="bv4-filter-tag" style="border-left-color: #f91a3c; color: #f91a3c;" href="../../blog/tag/ruby.html">#ruby</a>
       </div>
     </div>
 
 
-    <div class="bv4-content">
-      <!-- BEGIN app/views/blog/index.html.erb
+    <div class="bv4-content-wide">
+      <!-- BEGIN app/views/blog/posts/show.html.erb
 -->
-<span class="bv4-label">
-    posts tagged <em>#fedora</em>
-</span>
 
-  <div class="bv4-posts">
-      <article class="bv4-post">
-        <div class="bv4-post-meta">
-          <time class="bv4-post-date" datetime="2022-04-20T00:00:00Z">
-            2022-04-20
-          </time>
-            <div class="bv4-post-tags">
-                <a class="bv4-post-tag" style="color: #4a90e2;" href="../../blog/tag/fedora.html">#fedora</a>
-            </div>
-        </div>
+<article class="bv4-article">
 
-        <a class="bv4-post-title" href="../../blog/posts/learn-ruby-1-installing-ruby-with-asdf-on-fedora-linux.html">Learn Ruby: 1. Installing Ruby with asdf on Fedora Linux</a>
+  <header class="bv4-article-header">
+    <h1 class="bv4-article-title">Learn Ruby: 7. Git and GitHub Basics</h1>
+    <div class="bv4-article-meta">
+      <time class="bv4-post-date" datetime="2022-07-05T00:00:00Z">
+        July 5, 2022
+      </time>
+      <span class="bv4-meta-sep">·</span>
+      <span>by <strong>zvlex</strong></span>
+    </div>
+      <div class="bv4-article-footer">
+          <a class="bv4-post-tag" style="border-left-color: #f91a3c; color: #f91a3c;" href="../../blog/tag/ruby.html">#ruby</a>
+          <a class="bv4-post-tag" style="border-left-color: #4a90e2; color: #4a90e2;" href="../../blog/tag/git.html">#git</a>
+      </div>
+  </header>
 
-        <p class="bv4-post-byline">by <strong>zvlex</strong></p>
+  <div class="bv4-article-body" data-controller="highlight">
+    <!-- BEGIN app/views/layouts/action_text/contents/_content.html.erb
+--><div class="trix-content">
+  <!-- BEGIN /Users/zvlex/.asdf/installs/ruby/4.0.2/lib/ruby/gems/4.0.0/gems/actiontext-8.1.2/app/views/action_text/contents/_content.html.erb
+--><h2>GitHub</h2>
+      <p>GitHub is a source-control hosting service where code is stored. <a href="http://github.com">Register</a> and create a new <code>public</code> repository named <code>my_project</code>. Leave the <em>Initialize this repository with</em> section empty.</p>
 
-        <p class="bv4-post-excerpt">Initial Setup
-      Start by installing development tools and utilities:
+      <h2>Git</h2>
+      <p>Git is a version control system that records changes to a file or set of files over time so you can recall specific versions later. Git was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>, who also created Linux.</p>
+      <p>Almost every operation is performed locally — internet access is only needed when downloading a new version or pushing local changes.</p>
+      <p>Git has three states:</p>
+      <ul>
+        <li>Modified files that are not yet staged</li>
+        <li>Staged files</li>
+        <li>Committed changes</li>
+      </ul>
 
+      <h2>git config</h2>
+      <p>First, run a few commands in the terminal:</p>
+      <pre><code class="language-bash">git config --global user.name "FirstName LastName"
+git config --global user.email your_email@example.com
+git config --global core.editor vim</code></pre>
+      <p>These commands create a new file <code>~/.gitconfig</code>:</p>
+      <pre><code class="language-bash">[user]
+	name = FirstName LastName
+	email = your_email@example.com
+[core]
+  editor = vim</code></pre>
 
-      sudo dnf -y groupinstall "Development Tools"
-sudo dnf install vim git curl w...</p>
+      <h2>git init</h2>
+      <p>To initialize a repository, navigate to your project folder and run:</p>
+      <pre><code class="language-bash">cd my_project
+git init</code></pre>
+      <p>This creates a hidden <code>.git</code> directory:</p>
+      <pre><code class="language-bash">Initialized empty Git repository in ~/my_project/.git/</code></pre>
 
-        <a class="bv4-post-readmore" href="../../blog/posts/learn-ruby-1-installing-ruby-with-asdf-on-fedora-linux.html">read more →</a>
-      </article>
+      <h2>git status</h2>
+      <p>Shows the current state of your files. Create two new files <code>a.rb</code> and <code>b.rb</code>:</p>
+      <pre><code class="language-ruby"># a.rb
+class A
+  def call
+    puts "This is A class"
+  end
+end
+
+# b.rb
+class B
+  def call
+    puts "This is B class"
+  end
+end</code></pre>
+      <p>Running <code>git status</code> shows that Git is not yet tracking these files:</p>
+      <pre><code class="language-bash">On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        a.rb
+        b.rb
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+
+      <h2>git add</h2>
+      <p>Tells Git which files to track. Run <code>git add .</code> — the <code>.</code> means "add all changes and new files to the index".</p>
+      <p>Running <code>git status</code> again shows different output:</p>
+      <pre><code class="language-bash">On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+        new file:   a.rb
+        new file:   b.rb</code></pre>
+      <p>If you modify a staged file:</p>
+      <pre><code class="language-ruby"># a.rb
+class A
+  def call
+    puts "This is #{self.class} class"
+  end
+end</code></pre>
+      <p><code>git status</code> will show <code>a.rb</code> both in the staged list and as modified. Staging a file captures its state at that moment — you can keep editing it, but only the staged snapshot will be committed until you stage it again.</p>
+
+      <h2>git diff and git diff --staged</h2>
+      <p>Show unstaged changes:</p>
+      <pre><code class="language-bash">git diff</code></pre>
+      <pre><code class="language-bash">diff --git a/a.rb b/a.rb
+index df2ba36..b2605f3 100644
+--- a/a.rb
++++ b/a.rb
+@@ -1,5 +1,5 @@
+ class A
+   def call
+-    puts "This is A class"
++    puts "This is #{self.class} class"
+   end
+ end</code></pre>
+      <p>Show staged changes:</p>
+      <pre><code class="language-bash">git diff --staged</code></pre>
+      <pre><code class="language-bash">diff --git a/a.rb b/a.rb
+new file mode 100644
+index 0000000..df2ba36
+--- /dev/null
++++ b/a.rb
+@@ -0,0 +1,5 @@
++class A
++  def call
++    puts "This is A class"
++  end
++end</code></pre>
+      <p>After updating the index with <code>git add .</code>, the staged diff will reflect the latest version of the file.</p>
+
+      <h2>git commit</h2>
+      <p>To save your changes permanently in Git, create a commit with a description:</p>
+      <pre><code class="language-bash">git commit -m "Add new a.rb and b.rb files"</code></pre>
+      <pre><code class="language-bash">[master (root-commit) d7dfd69] Add new a.rb and b.rb files
+ 2 files changed, 10 insertions(+)
+ create mode 100644 a.rb
+ create mode 100644 b.rb</code></pre>
+
+      <h2>git log</h2>
+      <p>Shows the list of commits with author, date, and hash:</p>
+      <pre><code class="language-bash">git log</code></pre>
+      <pre><code class="language-bash">commit d7dfd69042385678bc0687766bc6651eccde4d2c (HEAD -&gt; master)
+Author: FirstName LastName &lt;user@example.com&gt;
+Date:   Wed Sep 22 23:25:31 2021 +0400
+
+    Add new a.rb and b.rb files</code></pre>
+
+      <h2>git stash</h2>
+      <p>Suppose you staged a new file <code>c.rb</code> but suddenly need to work on something else. Use <code>git stash</code> to temporarily hide your changes:</p>
+      <pre><code class="language-bash">git stash</code></pre>
+      <pre><code class="language-bash">Saved working directory and index state WIP on master: d7dfd69 Add new a.rb and b.rb files</code></pre>
+      <p>Your working tree is now clean. You can view the stash list:</p>
+      <pre><code class="language-bash">git stash list
+# stash@{0}: WIP on master: d7dfd69 Add new a.rb and b.rb files
+
+git stash show stash@{0}    # summary
+git stash show stash@{0} -a # full diff</code></pre>
+      <p>To restore the stash:</p>
+      <pre><code class="language-bash">git stash apply  # restore but keep in stash list
+git stash pop    # restore and remove from stash list</code></pre>
+
+      <h2>git checkout</h2>
+      <p>Lets you switch to or create a new branch.</p>
+      <pre><code class="language-bash">git checkout &lt;branch&gt;    # switch to a branch
+git checkout -b &lt;branch&gt; # create a new branch and switch to it</code></pre>
+      <p>A branch is a separate workspace within the project. The default branch name is <code>master</code>. After creating a branch with <code>git checkout -b my_feature</code>, it is an exact copy of <code>master</code>. Changes you commit there won't appear in <code>master</code>:</p>
+      <pre><code class="language-bash">git checkout master
+git log
+# d7dfd69 Add new a.rb and b.rb files  (d.rb is absent here)</code></pre>
+
+      <h2>git merge</h2>
+      <p>Once you finish work on <code>my_feature</code> and want to bring those changes into <code>master</code>:</p>
+      <pre><code class="language-bash">git checkout master
+git merge my_feature</code></pre>
+      <pre><code class="language-bash">Updating d7dfd69..0350f78
+Fast-forward
+ d.rb | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 d.rb</code></pre>
+      <p>The commit log now shows the merged history. You can then reorganize files and commit again:</p>
+      <pre><code class="language-bash">mkdir git_basics
+mv *.rb git_basics
+git add .
+git commit -m "Move .rb files to git_basics folder"</code></pre>
+
+      <h2>git push / git pull</h2>
+      <p>Link your local repository to the remote one you created on GitHub:</p>
+      <pre><code class="language-bash">git remote add origin git@github.com:&lt;YOUR_USERNAME&gt;/my_project.git
+git branch -M main
+git push -u origin main</code></pre>
+      <p>If you get a <code>Permission denied (publickey)</code> error, you need to add an SSH key.</p>
+
+      <h3>ssh-keygen</h3>
+      <p>Generate a key pair and enter a passphrase when prompted:</p>
+      <pre><code class="language-bash">ssh-keygen</code></pre>
+      <p>Print the public key and copy it:</p>
+      <pre><code class="language-bash">cat .ssh/id_rsa.pub</code></pre>
+      <p>Go to <strong>GitHub Profile → SSH and GPG keys → New SSH key</strong> and paste the key. Then push again:</p>
+      <pre><code class="language-bash">git push -u origin main</code></pre>
+      <pre><code class="language-bash">Enumerating objects: 7, done.
+...
+To github.com:username/my_project.git
+ * [new branch]      main -&gt; main
+Branch 'main' set up to track remote branch 'main' from 'origin'.</code></pre>
+
+      <h2>git alias</h2>
+      <p>You can shorten frequently used commands by adding an <code>[alias]</code> block to <code>~/.gitconfig</code>:</p>
+      <pre><code class="language-bash">[alias]
+        ci      = commit
+        br      = branch
+        co      = checkout
+        df      = diff
+        dfs     = diff --staged
+        st      = status</code></pre>
+      <p>That said, avoid aliases in the early stages — typing the full commands helps you learn them properly.</p>
+<!-- END /Users/zvlex/.asdf/installs/ruby/4.0.2/lib/ruby/gems/4.0.0/gems/actiontext-8.1.2/app/views/action_text/contents/_content.html.erb --></div>
+<!-- END app/views/layouts/action_text/contents/_content.html.erb -->
   </div>
 
-<!-- END app/views/blog/index.html.erb -->
+</article>
+<!-- END app/views/blog/posts/show.html.erb -->
     </div>
 
     <footer class="bv4-footer">
